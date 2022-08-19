@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import routes from './config/routes'
+import AuthProvider from "./providers/AuthProvider";
 
 import Error404 from './pages/Error404'
 
@@ -8,6 +9,7 @@ import './App.scss'
 
 function App() {
   return (
+<AuthProvider>
     <BrowserRouter>
       <Routes>
         {routes.map((route, index) => (
@@ -23,6 +25,7 @@ function App() {
         ))}
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
   )
 }
 

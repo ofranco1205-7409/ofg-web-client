@@ -1,11 +1,17 @@
-import './MenuTop.scss'
 import logo from '../../../assets/img/png/logo-white.png'
-
 import { Button } from 'antd'
 import { MenuFoldOutlined, MenuUnfoldOutlined, PoweroffOutlined } from '@ant-design/icons'
+import { logout } from "../../../api/auth";
+
+import "./MenuTop.scss";
 
 const MenuTop = props => {
   const { menuCollapsed, setMenuCollapsed } = props
+  const logoutUser = () => {
+    logout();
+    window.location.reload();
+  };
+
   return (
     <div className="menutop">
       <div className="menutop__left">
@@ -15,7 +21,7 @@ const MenuTop = props => {
         </Button>
       </div>
       <div className="menutop__rigth">
-        <Button type="link" onClick={() => console.log('click')}>
+        <Button type="link" onClick={logoutUser}>
           <PoweroffOutlined />
         </Button>
       </div>
