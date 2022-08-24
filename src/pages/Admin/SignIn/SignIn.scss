@@ -48,12 +48,12 @@
           width: 220px;
           font-size: 0em + 23px / $defaultFontSize;
         }
+
         &:hover {
           color: $font-grey-dark;
         }
-
         &:before {
-          content: node;
+          content: none;
         }
         span {
           height: 100%;

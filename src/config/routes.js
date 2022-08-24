@@ -5,6 +5,7 @@ import LayoutBasic from '../layouts/LayoutBasic'
 //Admin Pages
 import AdminHome from '../pages/Admin'
 import AdminSignIn from '../pages/Admin/SignIn'
+import AdminUsers from '../pages/Admin/Users'
 
 //pages
 import Home from '../pages/Home'
@@ -23,6 +24,11 @@ const routesAdmin = [
     path: '/admin/login',
     layout: LayoutAdmin,
     component: AdminSignIn
+  },
+  {
+    path: '/admin/users',
+    layout: LayoutAdmin,
+    component: AdminUsers
   },
   {
     path: '*',
