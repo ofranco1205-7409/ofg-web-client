@@ -6,6 +6,7 @@ import LayoutBasic from '../layouts/LayoutBasic'
 import AdminHome from '../pages/Admin'
 import AdminSignIn from '../pages/Admin/SignIn'
 import AdminUsers from '../pages/Admin/Users'
+import AdminMenuWeb from '../pages/Admin/MenuWeb'
 
 //pages
 import Home from '../pages/Home'
@@ -31,6 +32,11 @@ const routesAdmin = [
     component: AdminUsers
   },
   {
+    path: '/admin/menu',
+    layout: LayoutAdmin,
+    component: AdminMenuWeb
+  },
+  {
     path: '*',
     layout: LayoutAdmin,
     component: Error404
@@ -47,6 +53,26 @@ const routesClient = [
     path: '/contact',
     layout: LayoutBasic,
     component: Contact
+  },
+  /* {
+    path: '/courses',
+    layout: LayoutBasic,
+    component: Courses
+  },
+  {
+    path: '/blog',
+    layout: LayoutBasic,
+    component: Blog
+  },
+  {
+    path: '/blog/:url',
+    layout: LayoutBasic,
+    component: Blog
+  },*/
+  {
+    path: '*',
+    layout: LayoutBasic,
+    component: Error404
   }
 ]
 

@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
-import { HomeOutlined, UserOutlined } from '@ant-design/icons'
+import { HomeOutlined, UserOutlined, MenuOutlined } from '@ant-design/icons'
 
 import './MenuSider.scss'
 
@@ -15,6 +15,11 @@ const MenuSider = props => {
       label: <Link to={'/admin/users'}>Usuarios</Link>,
       key: '/admin/users',
       icon: <UserOutlined />
+    },
+    {
+      label: <Link to={'/admin/menu'}>Menu</Link>,
+      key: '/admin/menu',
+      icon: <MenuOutlined />
     },
     {
       label: <Link to={'/admin/menu-web'}>Menu Web</Link>,
